@@ -1,0 +1,1 @@
+export { SpecificFilm } from './SpecificFilm';

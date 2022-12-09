@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
 
 import { configAPI } from 'api/configAPI';
-import { REQUEST_TO_FILMS } from 'common/constants';
+import { REQUEST_TO_FILMS } from 'common/constants/api';
 import { FilmsRequestDataType, FilmsResponseType } from 'common/types/API/Films';
 
 export const filmsAPI = {

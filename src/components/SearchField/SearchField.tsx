@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FC, useEffect, useState } from 'react';
 
-import { EMPTY_STRING } from 'common/constants';
+import { EMPTY_STRING } from 'common/constants/common';
 import { useAppDispatch } from 'common/hooks/app';
 import { setSearchByTitle } from 'features/FilmsList/filmsRequestDataSlice';
 

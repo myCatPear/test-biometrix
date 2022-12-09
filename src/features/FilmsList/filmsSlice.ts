@@ -9,11 +9,8 @@ const initialState: FilmsResponseType = {
   data_size: 0,
 };
 
-const FILMS_REDUCER_NAME = 'films';
-const FETCH_FILMS_THUNK_NAME = `${FILMS_REDUCER_NAME}/fetchFilms`;
-
 export const fetchFilms = createAsyncThunk(
-  FETCH_FILMS_THUNK_NAME,
+  'films/fetchFilms',
   async (data: FilmsRequestDataType, thunkAPI) => {
     try {
       const res = await filmsAPI.fetchAllFilms(data);
@@ -28,7 +25,7 @@ export const fetchFilms = createAsyncThunk(
 );
 
 export const filmsSlice = createSlice({
-  name: FILMS_REDUCER_NAME,
+  name: 'films',
   initialState,
   reducers: {},
   extraReducers: builder => {

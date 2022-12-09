@@ -50,7 +50,7 @@ export type FilmsResponseType = {
 };
 
 export type ResponseFilmDataType = {
-  id: string;
+  id: number;
   adult: boolean;
   belongs_to_collection: Nullable<string>;
   budget: number;

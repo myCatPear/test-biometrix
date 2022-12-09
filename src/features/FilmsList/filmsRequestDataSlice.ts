@@ -1,10 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { EMPTY_STRING } from '../../common/constants';
-
+import { EMPTY_STRING } from 'common/constants/common';
 import { FilmsRequestDataType } from 'common/types/API/Films';
 
-const FILMS_REQUEST_DATA_REDUCER_NAME = 'films/requestData';
 const DEFAULT_PAGE_NUMBER = 0;
 const DEFAULT_PAGE_SIZE = 10;
 
@@ -14,7 +12,7 @@ const initialState: FilmsRequestDataType = {
 };
 
 export const filmsRequestDataSlice = createSlice({
-  name: FILMS_REQUEST_DATA_REDUCER_NAME,
+  name: 'films/requestData',
   initialState,
   reducers: {
     setSearchByTitle(state, action: PayloadAction<{ title: string }>) {
