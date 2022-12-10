@@ -1,0 +1,57 @@
+.specificFilm {
+  &__wrapper {
+    border: 2px solid burlywood;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  &__mainInfo {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__imgAndRating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+  }
+  &__img {
+    width: 100%;
+    min-width: 120px;
+  }
+  &__rating {
+    @media screen and (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+    }
+    &_value {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    &_separator {
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+  }
+  &__info {
+    margin-left: 10px;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    font-weight: bold;
+    margin-bottom: 5px;
+    &_value {
+      font-weight: normal;
+      font-family: Verdana;
+    }
+    &_tagline {
+      font-weight: normal;
+      font-style: italic;
+    }
+  }
+  &__filmDescription {
+    font-family: Verdana;
+  }
+}

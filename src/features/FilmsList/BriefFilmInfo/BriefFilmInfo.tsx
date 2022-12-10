@@ -25,7 +25,7 @@ export const BriefFilmInfo: FC<BriefFilmInfoType> = ({ ...props }) => {
           <NavLink to={`${ROUTE_TO_FILMS}/${id}`} className={style.link}>
             <span className={style.briefFilmInfo__title}>{title}</span>
             <span className={style.briefFilmInfo__releaseDate}>
-              {sliceReleasedDateForBriefFilmInfo(releaseDate)}
+              {releaseDate && sliceReleasedDateForBriefFilmInfo(releaseDate)}
             </span>
           </NavLink>
         </div>

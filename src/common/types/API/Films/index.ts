@@ -51,25 +51,50 @@ export type FilmsResponseType = {
 
 export type ResponseFilmDataType = {
   id: number;
-  adult: boolean;
-  belongs_to_collection: Nullable<string>;
-  budget: number;
-  genres: Nullable<{}>;
-  homepage: Nullable<number>;
-  imdb_id: string;
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  production_companies: Nullable<{}>;
-  production_countries: [];
-  release_date: string;
+  adult: Nullable<boolean>;
+  belongs_to_collection: Nullable<FilmCollectionType>;
+  budget: Nullable<number>;
+  genres: Nullable<FilmGenresType[]>;
+  homepage: Nullable<string>;
+  imdb_id: Nullable<string>;
+  original_language: Nullable<string>;
+  original_title: Nullable<string>;
+  overview: Nullable<string>;
+  popularity: Nullable<number>;
+  production_companies: Nullable<ProductionCompaniesType[]>;
+  production_countries: Nullable<ProductionCountriesType[]>;
+  release_date: Nullable<string>;
   revenue: Nullable<number>;
-  runtime: number;
-  spoken_languages: [];
-  status: string;
+  runtime: Nullable<number>;
+  spoken_languages: SpokenLanguagesType[];
+  status: Nullable<string>;
   tagline: Nullable<string>;
   title: string;
-  vote_average: number;
-  vote_count: number;
+  vote_average: Nullable<number>;
+  vote_count: Nullable<number>;
+};
+
+type SpokenLanguagesType = {
+  iso_639_1: string;
+  name: string;
+};
+
+type ProductionCompaniesType = {
+  id: number;
+  name: string;
+};
+
+type ProductionCountriesType = {
+  iso_3166_1: string;
+  name: string;
+};
+
+type FilmCollectionType = {
+  id: number;
+  name: string;
+};
+
+type FilmGenresType = {
+  id: number;
+  name: string;
 };
