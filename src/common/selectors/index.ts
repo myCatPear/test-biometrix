@@ -21,3 +21,24 @@ export const getSpecificFilmData = (state: RootState): ResponseFilmDataType[] =>
 
 export const getIsFetchSpecificFilmSuccess = (state: RootState): boolean =>
   state.specificFilmReducer.ok;
+
+export const getIsInitializedApp = (state: RootState): boolean =>
+  state.appReducer.isInitializedApp;
+
+export const getIsFetchFilms = (state: RootState): boolean =>
+  state.appReducer.isFetchFilms;
+
+export const getSearchValue = (state: RootState): string | undefined =>
+  state.filmsRequestDataReducer.search;
+
+export const getIsAdultContent = (state: RootState): boolean | undefined =>
+  state.filmsRequestDataReducer.adult;
+
+export const getPageSize = (state: RootState): number | undefined =>
+  state.filmsRequestDataReducer.page_size;
+
+export const getMaxBudget = (state: RootState): number | undefined =>
+  state.filmsRequestDataReducer.budget_max;
+
+export const getMinBudget = (state: RootState): number | undefined =>
+  state.filmsRequestDataReducer.budget_min;

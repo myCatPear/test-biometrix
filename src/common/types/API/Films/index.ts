@@ -66,7 +66,7 @@ export type ResponseFilmDataType = {
   release_date: Nullable<string>;
   revenue: Nullable<number>;
   runtime: Nullable<number>;
-  spoken_languages: SpokenLanguagesType[];
+  spoken_languages: Nullable<SpokenLanguagesType[]>;
   status: Nullable<string>;
   tagline: Nullable<string>;
   title: string;
