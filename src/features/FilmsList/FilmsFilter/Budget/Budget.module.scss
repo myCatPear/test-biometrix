@@ -1,0 +1,19 @@
+.budget {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border:2px solid darkblue;
+  text-align: center;
+  span {
+    font-family: Verdana;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  div {
+    margin-bottom: 5px;
+  }
+  button {
+    padding: 5px 10px;
+    font-weight: bold;
+  }
+}

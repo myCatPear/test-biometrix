@@ -1,0 +1,27 @@
+.genres {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border:2px solid lightgray;
+  border-radius: 5px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+  p {
+    width: calc(100%/3 - 10px);
+    margin-right: 10px;
+    @media screen and (max-width: 600px){
+        width: calc(100%/2 - 10px);
+    }
+  }
+  &__buttons {
+    text-align: center;
+    button {
+      padding: 5px 10px;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+  }
+}

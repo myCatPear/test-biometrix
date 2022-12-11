@@ -1,5 +1,7 @@
 import React, { ChangeEvent, FC } from 'react';
 
+import style from './SearchField.module.scss';
+
 import { useAppDispatch, useAppSelector } from 'common/hooks/app';
 import { getSearchValue } from 'common/selectors';
 import { setSearchByValue } from 'features/FilmsList/filmsRequestDataSlice';
@@ -12,7 +14,8 @@ export const SearchField: FC = () => {
   };
 
   return (
-    <div>
+    <div className={style.searchField}>
+      <span>Search any coincidence: </span>
       <input type="text" value={searchValue} onChange={onInputSearchValueChange} />
     </div>
   );

@@ -1,7 +1,9 @@
 import {
   FilmsRequestDataType,
   FilmsResponseType,
+  FilmsSortField,
   ResponseFilmDataType,
+  SortOrder,
 } from 'common/types/API/Films';
 import { RootState } from 'common/types/store';
 
@@ -42,3 +44,12 @@ export const getMaxBudget = (state: RootState): number | undefined =>
 
 export const getMinBudget = (state: RootState): number | undefined =>
   state.filmsRequestDataReducer.budget_min;
+
+export const getAllCheckedGenres = (state: RootState): string[] | undefined =>
+  state.filmsRequestDataReducer.genres;
+
+export const getCurrentSortField = (state: RootState): FilmsSortField | undefined =>
+  state.filmsRequestDataReducer.sort_field;
+
+export const getCurrentSortOrder = (state: RootState): SortOrder | undefined =>
+  state.filmsRequestDataReducer.sort_order;

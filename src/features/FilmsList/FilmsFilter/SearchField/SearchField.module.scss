@@ -1,0 +1,19 @@
+.searchField {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border: 2px solid burlywood;
+  border-radius: 5px;
+  span {
+    font-family: "Verdana";
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  input {
+    width: calc(100% - 200px);
+    padding: 5px 10px;
+    font-weight: bold;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,18 +1,22 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { EMPTY_STRING } from 'common/constants/common';
-import { FilmsRequestDataType } from 'common/types/API/Films';
+import { FilmsRequestDataType, FilmsSortField, SortOrder } from 'common/types/API/Films';
 
 const DEFAULT_PAGE_NUMBER = 0;
 const DEFAULT_PAGE_SIZE = 10;
 const DEFAULT_SEARCH_VALUE = EMPTY_STRING;
 const DEFAULT_IS_ADULT_CONTENT = false;
+const DEFAULT_SORT_ORDER: SortOrder = 'asc';
+const DEFAULT_SORT_FIELD: FilmsSortField = 'popularity';
 
 const initialState: FilmsRequestDataType = {
   page: DEFAULT_PAGE_NUMBER,
   page_size: DEFAULT_PAGE_SIZE,
   search: DEFAULT_SEARCH_VALUE,
   adult: DEFAULT_IS_ADULT_CONTENT,
+  sort_order: DEFAULT_SORT_ORDER,
+  sort_field: DEFAULT_SORT_FIELD,
 };
 
 export const filmsRequestDataSlice = createSlice({
@@ -62,6 +66,12 @@ export const filmsRequestDataSlice = createSlice({
     resetAllGenres(state) {
       delete state.genres;
     },
+    setFilmSortValue(state, action: PayloadAction<{ value: FilmsSortField }>) {
+      state.sort_field = action.payload.value;
+    },
+    setFilmSortOrder(state, action: PayloadAction<{ value: SortOrder }>) {
+      state.sort_order = action.payload.value;
+    },
   },
 });
 
@@ -77,4 +87,6 @@ export const {
   setGenres,
   resetAllGenres,
   setAllGenres,
+  setFilmSortValue,
+  setFilmSortOrder,
 } = filmsRequestDataSlice.actions;

@@ -4,7 +4,7 @@ export type FilmsRequestDataType = {
   page?: number;
   page_size?: number;
   sort_field?: FilmsSortField;
-  sort_order?: sortOrder;
+  sort_order?: SortOrder;
   imdb_id?: string;
   ids?: number[];
   search?: string;
@@ -41,7 +41,7 @@ export type FilmsSortField =
   | 'vote_average'
   | 'vote_count';
 
-export type sortOrder = 'asc' | 'desc';
+export type SortOrder = 'asc' | 'desc';
 
 export type FilmsResponseType = {
   ok: boolean;

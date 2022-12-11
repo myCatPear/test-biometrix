@@ -1,0 +1,12 @@
+.sortBy {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border:2px solid aqua;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  select {
+    margin-right: 10px;
+  }
+}

@@ -1,5 +1,7 @@
 import React, { ChangeEvent, FC } from 'react';
 
+import style from './Budget.module.scss';
+
 import { useAppDispatch, useAppSelector } from 'common/hooks/app';
 import { getMaxBudget, getMinBudget } from 'common/selectors';
 import {
@@ -30,7 +32,7 @@ export const Budget: FC = () => {
   }
 
   return (
-    <div>
+    <div className={style.budget}>
       <div>
         <span>Min budget: </span>
         <input type="number" value={minBudget} onChange={onInputSetMinBudgetChange} />

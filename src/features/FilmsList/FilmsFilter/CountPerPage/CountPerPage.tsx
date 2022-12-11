@@ -1,5 +1,7 @@
 import React, { ChangeEvent, FC } from 'react';
 
+import style from './CountPerPage.module.scss';
+
 import { useAppDispatch, useAppSelector } from 'common/hooks/app';
 import { getPageSize } from 'common/selectors';
 import { setCountPerPage } from 'features/FilmsList/filmsRequestDataSlice';
@@ -13,7 +15,7 @@ export const CountPerPage: FC = () => {
   };
 
   return (
-    <div>
+    <div className={style.countPerPage}>
       <span>Count per page </span>
       <select onChange={onSelectCountPerPageChange} value={countPerPage}>
         <option value="10">10</option>
