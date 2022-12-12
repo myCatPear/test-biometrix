@@ -4,7 +4,7 @@ import { EMPTY_STRING } from 'common/constants/common';
 import { FilmsRequestDataType, FilmsSortField, SortOrder } from 'common/types/API/Films';
 
 const DEFAULT_PAGE_NUMBER = 0;
-const DEFAULT_PAGE_SIZE = 10;
+const DEFAULT_PAGE_SIZE = 100;
 const DEFAULT_SEARCH_VALUE = EMPTY_STRING;
 const DEFAULT_IS_ADULT_CONTENT = false;
 const DEFAULT_SORT_ORDER: SortOrder = 'asc';
@@ -30,6 +30,9 @@ export const filmsRequestDataSlice = createSlice({
     },
     setCountPerPage(state, action: PayloadAction<{ count: number }>) {
       state.page_size = action.payload.count;
+    },
+    setCurrentPage(state, action: PayloadAction<{ value: number }>) {
+      state.page = action.payload.value;
     },
     setIsAdultContent(state, action: PayloadAction<{ value: boolean }>) {
       state.adult = action.payload.value;
@@ -89,4 +92,5 @@ export const {
   setAllGenres,
   setFilmSortValue,
   setFilmSortOrder,
+  setCurrentPage,
 } = filmsRequestDataSlice.actions;
