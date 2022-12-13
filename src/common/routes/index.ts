@@ -23,4 +23,8 @@ export const routes = [
     route: ROUTE_TO_NOT_EXISTING_PAGE,
     Component: PageNotFound,
   },
+  {
+    route: ROUTE_TO_NOT_EXISTING_PAGE,
+    Component: PageNotFound,
+  },
 ];
