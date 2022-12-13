@@ -3,6 +3,7 @@ import React, { FC, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { BackToFilms } from '../../components';
+import { SkeletonFilmLoading } from '../../components/SkeletonFilmsLoading/SkeletonFilmLoading';
 
 import style from './SpecificFilm.module.scss';
 import { SpecificFilmDescription } from './SpecificFilmDescription';
@@ -30,7 +31,7 @@ export const SpecificFilm: FC = () => {
   }, []);
 
   if (!isFetchSpecificFilmSuccess) {
-    return <div>Loading</div>;
+    return <SkeletonFilmLoading />;
   }
 
   if (
