@@ -5,11 +5,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { setIsInitializedApp } from './appSlice';
 
-import {
-  ROUTE_TO_FILMS,
-  ROUTE_TO_GH_PAGE_MAIN_REDIRECT,
-  ROUTE_TO_HOME,
-} from 'common/constants/routes';
+import { ROUTE_TO_FILMS, ROUTE_TO_NOT_EXISTING_PAGE } from 'common/constants/routes';
 import { useAppDispatch, useAppSelector } from 'common/hooks/app';
 import { routes } from 'common/routes';
 import { getIsInitializedApp } from 'common/selectors';
@@ -35,9 +31,8 @@ const App: FC = () => {
             <Route key={route.route} path={route.route} element={<route.Component />} />
           );
         })}
-        <Route path={ROUTE_TO_HOME} element={<Navigate to={ROUTE_TO_FILMS} />} />
         <Route
-          path={ROUTE_TO_GH_PAGE_MAIN_REDIRECT}
+          path={ROUTE_TO_NOT_EXISTING_PAGE}
           element={<Navigate to={ROUTE_TO_FILMS} />}
         />
       </Routes>
