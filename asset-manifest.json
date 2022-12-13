@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/test-biometrix/static/css/main.57caaee2.css",
-    "main.js": "/test-biometrix/static/js/main.7475d96b.js",
+    "main.js": "/test-biometrix/static/js/main.6c12d252.js",
     "static/js/787.c3476068.chunk.js": "/test-biometrix/static/js/787.c3476068.chunk.js",
     "index.html": "/test-biometrix/index.html",
     "static/media/arrow-left-line.svg": "/test-biometrix/static/media/arrow-left-line.f7a9c025b4959acee3c65e7c88fbeb19.svg",
     "main.57caaee2.css.map": "/test-biometrix/static/css/main.57caaee2.css.map",
-    "main.7475d96b.js.map": "/test-biometrix/static/js/main.7475d96b.js.map",
+    "main.6c12d252.js.map": "/test-biometrix/static/js/main.6c12d252.js.map",
     "787.c3476068.chunk.js.map": "/test-biometrix/static/js/787.c3476068.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.57caaee2.css",
-    "static/js/main.7475d96b.js"
+    "static/js/main.6c12d252.js"
   ]
 }
